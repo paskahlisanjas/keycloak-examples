@@ -1,4 +1,4 @@
 {
-    "backend-usrpwd": "your_backend_client_id:your_backend_client_secret",
-    "realm":"your_realm"
+    "backend-usrpwd": "KOGNISI:your_backend_client_secret",
+    "realm":"3b4f74d1-5148-4e36-8cba-073f32c3cc0f"
 }

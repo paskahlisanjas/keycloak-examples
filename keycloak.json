@@ -1,8 +1,8 @@
 {
-  "realm": "testRealm",
-  "auth-server-url": "http://localhost:8180/auth",
+  "realm": "master",
+  "auth-server-url": "https://dev.sso.mykg.id/auth",
   "ssl-required": "none",
-  "resource": "keycloaktest",
+  "resource": "KOGNISI",
   "public-client": true,
   "use-resource-role-mappings": true
 }

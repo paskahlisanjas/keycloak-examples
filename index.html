@@ -1,19 +1,13 @@
 <head>
-    <script src="keycloak.js"></script>
+    <title>x</title>
+    <!-- <script src="keycloak.js"></script> -->
+    <script src="https://dev.sso.mykg.id/auth/js/keycloak.js"></script>
 
     <script>
       var keycloak = Keycloak();
-      keycloak.init().success(function (authenticated) {
-        console.log(keycloak);
-        if (authenticated) {
-          keycloak.loadUserInfo().success(function (result) {
-            console.log(result);
-            someUserInfo(keycloak);
-          });
-        } else {
-          displayLoggedOff();
-        }
-      }).error(function () {
+      keycloak.init({onLoad: 'login-required', silentCheckSsoRedirectUri: 'http://locahost:8000/api/login-sso', promiseType: 'native' }).then(function(authenticated) {
+        alert(authenticated ? 'authenticated' : 'not authenticated');
+      }).catch(function() {
         alert('failed to initialize');
       });
     </script>
